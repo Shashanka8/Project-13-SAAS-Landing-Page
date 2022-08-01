@@ -26,7 +26,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-right: 100px;
+  margin-right: 8%;
 }
 
 nav .logo img {
@@ -38,12 +38,12 @@ nav .list {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
 }
 
 nav .list-item {
   list-style: none;
   margin-right: 60px;
+  cursor: pointer;
 }
 
 .list-item.active {
@@ -57,6 +57,13 @@ nav .list-item {
   padding: 10px 30px;
   color: #ffffff;
   border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: none;
+  height: 32px;
+  cursor: pointer;
 }
 
 .hero {
@@ -155,9 +162,8 @@ nav .list-item {
 }
 
 .service-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 40px;
 }
 
@@ -165,6 +171,7 @@ nav .list-item {
   margin: 0 10px;
   border-radius: 30px;
   box-shadow: 5px 5px 3px #d3d3d3;
+  cursor: pointer;
 }
 
 .service-card .card-header {
@@ -218,3 +225,147 @@ nav .list-item {
 }
 
 /* ----------- Services section end ----------- */
+
+/* ---------- Media Queries ----------  */
+@media screen and (max-width: 1199px) {
+  header {
+    padding: 2% 6%;
+  }
+  nav {
+    margin-right: 40px;
+  }
+  nav .list-item {
+    margin-right: 40px;
+  }
+  .features-section {
+    padding: 4% 6% 1% 6%;
+  }
+  .feature-left img {
+    margin-top: 60px;
+    height: 500px;
+  }
+  .feature-right {
+    width: 40%;
+  }
+  .services-section {
+    padding: 1% 2%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  header {
+    padding: 2% 4%;
+  }
+  nav {
+    margin-right: 0;
+  }
+  nav .list-item {
+    margin-right: 20px;
+  }
+  .hero-left {
+    margin-top: 60px;
+    width: 40%;
+  }
+  .hero-left h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 36px;
+  }
+  .hero-right img {
+    height: 400px;
+  }
+  .features-section {
+    padding: 3% 4% 1% 4%;
+  }
+  .feature-left img {
+    margin-top: 100px;
+    height: 400px;
+  }
+  .feature-right {
+    width: 50%;
+  }
+  .feature-card div h3 {
+    font-size: 22px;
+  }
+  .feature-cards {
+    padding: 3%;
+    margin-top: 30px;
+  }
+  .services-section {
+    padding: 1% 10%;
+  }
+  .service-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .service-card {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    border-radius: 30px 30px 0 0;
+  }
+  nav .list {
+    display: none;
+  }
+  .menu-icon {
+    display: inline-block;
+  }
+  .hero-left h1 {
+    line-height: 1.2;
+  }
+  .hero-left p {
+    margin-top: 20px;
+  }
+  .hero-right img {
+    position: absolute;
+    right: 0;
+    height: 320px;
+  }
+  .features-section {
+    flex-direction: column;
+    padding: 3% 6% 1% 6%;
+  }
+  .feature-left {
+    width: 100%;
+  }
+  .feature-left img {
+    margin-top: 0;
+    width: 100%;
+  }
+  .feature-right {
+    width: 100%;
+  }
+  .feature-card {
+    margin-bottom: 30px;
+  }
+  .services-section {
+    padding: 1% 6%;
+  }
+  .service-card .card-body.active h3 {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    border-radius: 15px 15px 0 0;
+  }
+  .hero-left {
+    margin-top: 90%;
+    width: 95%;
+    margin-bottom: 20px;
+  }
+  .hero-right img {
+    width: 95%;
+  }
+  .feature-right {
+    margin-top: 10px;
+  }
+  .feature-card div p {
+    margin-top: 10px;
+  }
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+}
